@@ -1,2 +1,2 @@
-# PokemonGusserPyxel
-A Pokemon Gusser Game created using Pyxel
+# PokemonGuesserPyxel
+A Pokemon Guesser Game created using Pyxel
