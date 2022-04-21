@@ -99,7 +99,6 @@ class App:
 
     def __init__(self):
         pyxel.init(180, 180, title="Pokemon Guesser Game")
-        #pyxel.load("my_resource.pyxres")
         self.game_init()
         
         pyxel.run(self.update, self.draw)
@@ -135,7 +134,6 @@ class App:
     
     def draw(self):
         pyxel.cls(0)
-        #pyxel.text(55, 41, "Hello, Pyxel!", pyxel.frame_count % 16)
         pyxel.blt(self.imgx, self.imgy, 0, 0, 0, self.imgw, self.imgh)
         
         self.message = add_letter(self.message)
@@ -144,7 +142,7 @@ class App:
         if pyxel.btnr(pyxel.KEY_RETURN):
             if self.restart == False:
                 guessed_name = self.message.split(':\n\n')[-1]
-                if guessed_name == "d":
+                if guessed_name == self.name:
                     self.set_answer_image()
                     self.txty = 130
                     self.message = f"Well done! It's {self.name}!\nYou are a pokemon expert!!\n\nPress enter to Continue, 0 to quit: "
@@ -159,9 +157,7 @@ class App:
             else:
                 os.remove(self.filename)
                 self.game_init()
-                #pyxel.blt(10, 10, 0, 0, 0, 475, 475)
 
         if pyxel.btnr(pyxel.KEY_BACKSPACE):
             self.message = remove_letter(self.message)
-        #pyxel.input_text = display_message
 App()
