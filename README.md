@@ -1,5 +1,5 @@
 # PokemonGuesserPyxel
-A Pokemon Guesser Game created using Pyxel
+A Pokemon Guesser Game created using Pyxel and Python
 
 # Requirement
 Need Internet connection while running the game (it will load pics from pokeapi)
