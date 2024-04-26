@@ -104,7 +104,7 @@ class App:
         pyxel.run(self.update, self.draw)
         
     def game_init(self):
-        r_num = randint(1,151)
+        r_num = randint(1,152)
         self.restart = False
         self.imgw = 40
         self.imgh = 30
